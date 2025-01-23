@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel='stylesheet' href='/stylesheets/styles.css' />
+    <title>Sign In</title>
+</head>
+
+<body>
+    <section class="header">
+        <h1>Sign in</h1>
+    </section>
+
+    <main>
+        <div class="signBox" id="container">
+            <form action="/signIn" method="POST">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="***********" required>
+                <br>
+                <input type="submit" id="signInButton" value="Sign In"></input>
+            </form>
+
+            <p>Don't have an account? <a href="/signUp">Sign Up</a> to get started.</p>
+        </div>
+    </main>
+
+    <script>
+         <% if (typeof message !== 'undefined' && message) { %>
+      alert('<%= message %>'); 
+    <% } %>
+    </script>
+</body>
+
+</html>

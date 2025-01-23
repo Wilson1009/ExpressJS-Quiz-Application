@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Results</title>
+    <link rel='stylesheet' href='/stylesheets/styles.css' />
+</head>
+<body>
+    <section class="header">
+        <h1>Scores</h1>
+    </section>
+    <div id="container4">
+    <h1>Results for <%= username %></h1>
+    <h2>High Score: <%= highscore %></h2>
+    <h3>All Attempts:</h3>
+    <ul>
+        <% attempts.forEach(function(attempt) { %>
+            <li><%= attempt %></li>
+        <% }); %>
+    </ul>
+    <a href="/questionPage">Try Another Quiz</a>
+</div>
+</body>
+</html>
